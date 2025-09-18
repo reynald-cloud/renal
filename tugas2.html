@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 HTML</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #f9a2a2;
+            padding: 25px;
+            border-radius: 15px;
+            width: 600px;
+            max-width: 95%;
+            box-sizing: border-box;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #0077b6;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            border-color: #0077b6;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 119, 182, 0.4);
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-submit {
+            flex: 1;
+            background: #c7b121;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #023e8a;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="post">
+            <h1>Form Pesan Tiket Bioskop</h1>
+
+            <h2>Login</h2>
+            <table>
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                    <td><input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nomor">No. HP</label></td>
+                    <td><input type="text" id="nomor" name="nomor" placeholder="Masukkan No HP" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" id="password" name="password" placeholder="Masukkan password" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password2">Konfirmasi Password</label></td>
+                    <td><input type="password" id="password2" name="password2" placeholder="Masukkan password" required></td>
+                </tr>
+            </table>
+
+            <h2>Detail Pemesanan</h2>
+            <table>
+                <tr>
+                    <td><label for="film">Pilih Film</label></td>
+                    <td>
+                        <select id="film" name="film" required>
+                            <option value="" disabled selected>Pilih film</option>
+                            <option value="conjuring">Conjuring: The Last Ride</option>
+                            <option value="merah putih">Merah Putih: One For All</option>
+                            <option value="spiderman">Spiderman: Coming Home</option>
+                            <option value="agak laen">Agak Laen</option>
+                            <option value="tukang bubur">Tukang Bubur Naik Haji</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="jam">Jam</label></td>
+                    <td>
+                        <select id="jam" name="jam" required>
+                            <option value="" disabled selected>Pilih jam tayang</option>
+                            <option value="10:00">10:00 Pagi</option>
+                            <option value="13:00">14:00 Siang</option>
+                            <option value="16:00">17:00 Sore</option>
+                            <option value="19:00">20:00 Malam</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kelas Tiket</td>
+                    <td>
+                        <label><input type="radio" name="kelas" value="deluxe" required> Deluxe</label><br>
+                        <label><input type="radio" name="kelas" value="premiere"> Premiere</label><br>
+                        <label><input type="radio" name="kelas" value="vip"> VIP</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pilih No Kursi</td>
+                    <td>
+                        <label><input type="checkbox" name="kursi" value="A1"> A1</label>
+                        <label><input type="checkbox" name="kursi" value="A2"> A2</label>
+                        <label><input type="checkbox" name="kursi" value="A3"> A3</label><br>
+                        <label><input type="checkbox" name="kursi" value="B1"> B1</label>
+                        <label><input type="checkbox" name="kursi" value="B2"> B2</label>
+                        <label><input type="checkbox" name="kursi" value="B3"> B3</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Snack</td>
+                    <td>
+                        <label><input type="checkbox" name="snack" value="popcorn"> Popcorn</label><br>
+                        <label><input type="checkbox" name="snack" value="minuman"> Minuman</label><br>
+                        <label><input type="checkbox" name="snack" value="indomie"> Indomie Bangladesh</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Metode Pembayaran</td>
+                    <td>
+                        <label><input type="radio" name="pembayaran" value="qris" required> Qris</label><br>
+                        <label><input type="radio" name="pembayaran" value="transfer" required> Transfer Bank</label>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="btn-container">
+                <button type="submit" class="btn-submit">Pesan</button>
+                <button type="reset" class="btn-submit">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
