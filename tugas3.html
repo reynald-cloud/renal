@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3</title>
+</head>
+<body>
+    <h2>Kalkulator Sederhana</h2>
+    <p>Input Angka Pertama <input type="number" id="angka1"></p>
+    <p>Input Angka Kedua <input type="number" id="angka2"></p>
+
+    <p>
+        <button onclick="hitung('+')">+</button>
+        <button onclick="hitung('-')">-</button>
+        <button onclick="hitung('*')">x</button>
+        <button onclick="hitung('/')">/</button>
+    </p>
+
+    <p>Hasil <input type="number" id="hasil" readonly></p>
+
+    <script>
+        function hitung(op) {
+            let a = parseFloat(document.getElementById("angka1").value);
+            let b = parseFloat(document.getElementById("angka2").value);
+            let hasil;
+
+            if (op == "+") hasil = a + b;
+            else if (op == "-") hasil = a - b;
+            else if (op == "*") hasil = a * b;
+            else if (op == "/") hasil = a / b;
+
+            document.getElementById("hasil").value = hasil;
+        }
+    </script>
+</body>
+</html>
